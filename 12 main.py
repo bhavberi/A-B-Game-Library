@@ -229,6 +229,18 @@ def check():
     s8 = button8['state']
     s9 = button9['state']
 
+    if ((button1['text'] == ("X")) or (button1['text'] == ("O"))):
+        if ((button2['text'] == ("X")) or (button2['text'] == ("O"))):
+            if ((button3['text'] == ("X")) or (button3['text'] == ("O"))):
+                if ((button4['text'] == ("X")) or (button4['text'] == ("O"))):
+                    if ((button5['text'] == ("X")) or (button5['text'] == ("O"))):
+                        if ((button6['text'] == ("X")) or (button6['text'] == ("O"))):
+                            if ((button7['text'] == ("X")) or (button7['text'] == ("O"))):
+                                if ((button8['text'] == ("X")) or (button8['text'] == ("O"))):
+                                    if ((button9['text'] == ("X")) or (button9['text'] == ("O"))):
+                                        draw = True
+                                        won = "The Match has drawn"
+
     if (button1['text'] == ("X")):
         if (button4['text'] == ("X")):
             if (button7['text'] == ("X")):
@@ -341,7 +353,7 @@ def check():
                 player_b_won = True
                 won = "Player O has won"
 
-    if ((button1['text'] == ("X")) or (button1['text'] == ("O"))):
+    """if ((button1['text'] == ("X")) or (button1['text'] == ("O"))):
         if ((button2['text'] == ("X")) or (button2['text'] == ("O"))):
             if ((button3['text'] == ("X")) or (button3['text'] == ("O"))):
                 if ((button4['text'] == ("X")) or (button4['text'] == ("O"))):
@@ -352,12 +364,13 @@ def check():
                                     if ((button9['text'] == ("X")) or (button9['text'] == ("O"))):
                                         draw = True
                                         won = "The Match has drawn"
+    """                                    
     if (player_b_won == True or player_a_won == True or draw == True):
         if player_b_won == True:
             s = "Player B has won  \t\n" + won
-        if player_a_won == True:
+        elif player_a_won == True:
             s = "Player A has won  \t\n" + won
-        if draw == True:
+        elif draw == True:
             s = won
         scoreSet()
         Menu()
